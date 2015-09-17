@@ -188,6 +188,9 @@ var optionalEndTagBlockElements = makeMap("colgroup,dd,dt,li,p,tbody,td,tfoot,th
                                             optionalEndTagInlineElements,
                                             optionalEndTagBlockElements);
 
+// Unsafe Elements
+var unsafeElements = angular.extend({}, optionalEndTagInlineElements, makeMap("iframe"));
+
 // Safe Block Elements - HTML5
 var blockElements = angular.extend({}, optionalEndTagBlockElements, makeMap("address,article," +
         "aside,blockquote,caption,center,del,dir,div,dl,figure,figcaption,footer,h1,h2,h3,h4,h5," +
